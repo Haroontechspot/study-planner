@@ -1,0 +1,109 @@
+.day-container {
+  background: #fff;
+  padding: 20px;
+  width: 70%;
+  min-height: 45vh;
+  margin: auto;
+  border-radius: 14px;
+  .days {
+    display: flex;
+    justify-content: space-around;
+    .day {
+      display: grid;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      text-align: center;
+      align-items: center;
+    }
+    .inactive-day {
+      border: 1px solid black;
+    }
+    .active-day {
+      border: 1px solid red;
+      color: #fff;
+      background: red;
+      font-weight: bold;
+    }
+    .day-filled {
+      color: green;
+      font-weight: bold;
+      &::before {
+        content: "✓";
+      }
+    }
+  }
+  .progress-container {
+    padding: 10px;
+    margin-top: 28px;
+    height: 79%;
+    .toolhint {
+      height: 56px;
+      width: 50%;
+      text-align: center;
+      align-items: center;
+      display: grid;
+      background: #41464b;
+      border-radius: 6px;
+      color: #fff;
+      position: relative;
+      margin-bottom: 17px;
+      &:after {
+        border: 0px solid black;
+        content: "";
+        position: absolute;
+        left: 40%;
+        top: 96%;
+        width: 0;
+        height: 0;
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-top: 14px solid #41464b;
+        clear: both;
+      }
+    }
+    .progress {
+      height: 50px;
+      text-align: center;
+      align-items: center;
+      width: 100%;
+      font-size: 16px;
+      margin-top: 5px;
+      .label {
+        width: 50%;
+        text-align: center;
+      }
+      .input-container {
+        width: 20%;
+        .input-box {
+          font-size: 14px;
+          text-align: center;
+          border: 1px solid red;
+          width: 100%;
+          outline-color: red;
+          border-radius: 4px;
+          padding: 0px;
+          height: 35px;
+        }
+      }
+      .hours-label {
+        width: 30%;
+      }
+    }
+    .disabled {
+      background: red;
+      color: #fff;
+    }
+  }
+  .btn-container {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      width: 50%;
+      margin: 10px;
+      border-radius: 16px;
+    }
+  }
+}

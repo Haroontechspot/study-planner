@@ -1,0 +1,21 @@
+.full-background-img {
+  background: url("https://source.unsplash.com/1600x900/?nature,study,day,rain");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.bg-body {
+  @extend .full-background-img;
+  min-height: 101vh;
+  width: 100%;
+  .linear-grid {
+    min-height: inherit;
+    background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.521569),
+      rgba(0, 0, 0, 0.470588)
+    );
+  }
+}

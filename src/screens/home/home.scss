@@ -1,0 +1,10 @@
+.home-container{
+    height: 100vh;
+    width: inherit;
+    display: grid;
+    align-items: center;
+    [class~='row']{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}

@@ -1,0 +1,86 @@
+.card-style {
+  border: 1px solid #8080806b;
+  border-radius: 37px;
+  background-color: #000000b8;
+  color: #fff;
+}
+
+.custom-dropdown {
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: -11px;
+  :hover {
+    background-color: none;
+    color: inherit;
+  }
+}
+
+.rm-padding-horizontal {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.pad-horizontal {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.splash-container {
+  max-width: 70%;
+  margin: auto;
+  padding-top: 20px;
+  @extend .pad-horizontal;
+  .heading-container {
+    @extend .card-style, .rm-padding-horizontal;
+    padding: 5%;
+    margin-top: 1%;
+    min-height: 40vh;
+    text-align: center;
+    .heading {
+      font-weight: bold;
+    }
+    p {
+      font-size: 28px;
+    }
+  }
+  .sub-menu-container {
+    @extend .rm-padding-horizontal;
+    .hint-icon {
+      font-size: 50px;
+    }
+    .info-container {
+      @extend .card-style;
+      min-height: 40vh;
+      justify-content: center;
+      padding: 2%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      font-size: 20px;
+      .degree-container {
+        justify-content: center;
+        .degree-dropdown {
+          @extend .custom-dropdown;
+          margin-left: 10px;
+        }
+      }
+      .semester-unit {
+        justify-content: center;
+        .unit-text {
+          margin-left: 10px;
+        }
+        .degree-dropdown {
+          @extend .custom-dropdown;
+          margin-left: 10px;
+        }
+      }
+      .btn-container {
+        text-align: center;
+        .started-btn {
+          border-radius: 20px;
+          min-width: 70%;
+        }
+      }
+    }
+  }
+}
