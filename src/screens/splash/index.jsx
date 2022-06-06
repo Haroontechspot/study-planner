@@ -1,13 +1,9 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { BsInfoCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 //components
-import { Dropdown, WithTooltip, WithBgColor } from "../../components";
-
-//images
-import ScheduleImg from "../../images/logo.png";
+import { Dropdown, WithBgColor } from "../../components";
 
 //stylesheet
 import "../../scss/splash.scss";

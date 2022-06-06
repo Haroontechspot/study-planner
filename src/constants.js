@@ -75,6 +75,7 @@ export const piechartdatasetFormatter = (days) => {
       pf[ProgressFields.SOCIAL] += progress[ProgressFields.SOCIAL];
       pf[ProgressFields.PERSONAL] += progress[ProgressFields.PERSONAL];
     }
+    return day
   });
   data.datasets[0].data = Object.values(pf);
   return data;
@@ -116,6 +117,7 @@ export const dayChartFormatter = (days) => {
         }
       });
     }
+    return day
   });
 
   return datasets;

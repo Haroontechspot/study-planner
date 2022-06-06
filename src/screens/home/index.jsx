@@ -9,7 +9,7 @@ import { WithBgColor } from "../../components";
 import { toursteps } from "../../constants";
 import { Days } from "../days";
 import { DayReportsChart } from "../days-report-chart";
-import "./home.scss";
+import "../../scss/home.scss";
 
 export const Home = () => {
   const [isTourOpen, setTourOpen] = useState(false);

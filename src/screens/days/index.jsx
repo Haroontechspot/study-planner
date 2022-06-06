@@ -6,7 +6,7 @@ import { DAY_CLASS, ProgressFields as Fields } from "../../constants";
 import { updateDayProgress, moveNext, moveBack } from "../../reducers/report";
 import { dayBtnEnabled, findActiveDay } from "../../utils";
 import { ProgressFields } from "./progress";
-import "./style.scss";
+import "../../scss/days.scss";
 
 const initialState = {
   study: 0,
@@ -68,7 +68,6 @@ export const Days = () => {
     setState({ type: "many", payload: progress });
   }, [progress, activeday]);
 
-  console.log("pre ", progress);
   return (
     <div className="day-container">
       <div className="days">

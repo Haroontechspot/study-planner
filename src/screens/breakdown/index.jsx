@@ -8,8 +8,9 @@ import ReactToPrint from "react-to-print";
 import { WithBgColor, Switch, PieChart } from "../../components";
 import { DayReportsChart } from "../days-report-chart";
 import { reset } from "../../reducers/report";
-import "./breakdown.style.scss";
 import { piechartdatasetFormatter, ReportStatus } from "../../constants";
+import "../../scss/breakdown.style.scss";
+
 
 export const BreakDownScreen = () => {
   const [reporStatus, setReportStatus] = useState(ReportStatus.DAILY);

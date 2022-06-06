@@ -3,13 +3,13 @@ import "./switch.scss";
 
 export const Switch = ({ checked, className, onClick }) => (
   <label
-    class="switch"
+    className="switch"
     onClick={(e) => {
       e.preventDefault();
       onClick();
     }}
   >
-    <input type="checkbox" checked={checked} />
-    <span class={`slider round ${className}`}></span>
+    <input type="checkbox" checked={checked} readOnly/>
+    <span className={`slider round ${className}`}></span>
   </label>
 );
