@@ -1,0 +1,10 @@
+$custom-color: #990033;
+$secondary: #069;
+
+$theme-colors: (
+  "primary": $custom-color,
+  "secondary": $secondary,
+  "danger": #ff4136,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";

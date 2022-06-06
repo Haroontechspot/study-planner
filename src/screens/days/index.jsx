@@ -1,5 +1,6 @@
 import React, { useEffect, useReducer } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { DAY_CLASS, ProgressFields as Fields } from "../../constants";
 import { updateDayProgress, moveNext, moveBack } from "../../reducers/report";
@@ -77,53 +78,60 @@ export const Days = () => {
           </div>
         ))}
       </div>
-      <div className="progress-container" style={{ minHight: 500 }}>
-        <div className="toolhint">40 hours recommended per week</div>
-        <ProgressFields
-          label="Study"
-          value={progress.study}
-          name={Fields.STUDY}
-          onFocusOut={updateProgress}
-        />
-        <ProgressFields
-          label="Work"
-          value={progress.work}
-          name={Fields.WORK}
-          onFocusOut={updateProgress}
-        />
-        <ProgressFields
-          label="Social"
-          value={progress.social}
-          name={Fields.SOCIAL}
-          onFocusOut={updateProgress}
-        />
-        <ProgressFields
-          label="Personal"
-          value={progress.personal}
-          name={Fields.PERSONAL}
-          onFocusOut={updateProgress}
-          disable={true}
-        />
-      </div>
-      <div className="btn-container">
-        <button
-          className="btn btn-outline-primary"
-          onClick={prevDay}
-          disabled={!prevEnabled}
-        >
-          Prev
-        </button>
-        {nextEnabled ? (
+      <div className="progress-parent">
+        <div className="progress-container" style={{ minHight: 500 }}>
+          <div className="toolhint">40 hours recommended per week</div>
+          <div className="fields-container">
+            <ProgressFields
+              label="Study"
+              value={progress.study}
+              name={Fields.STUDY}
+              onFocusOut={updateProgress}
+            />
+            <ProgressFields
+              label="Work"
+              value={progress.work}
+              name={Fields.WORK}
+              onFocusOut={updateProgress}
+            />
+            <ProgressFields
+              label="Social"
+              value={progress.social}
+              name={Fields.SOCIAL}
+              onFocusOut={updateProgress}
+            />
+            <ProgressFields
+              label="Personal"
+              value={progress.personal}
+              name={Fields.PERSONAL}
+              onFocusOut={updateProgress}
+              disable={true}
+              className="personal-dv"
+            />
+          </div>
+        </div>
+        <div className="btn-container">
           <button
             className="btn btn-outline-primary"
-            onClick={nextDay}
-            disabled={!nextEnabled}
+            onClick={prevDay}
+            disabled={!prevEnabled}
           >
-            Next
+            Prev
           </button>
-        ) : (
-          <button className="btn btn-outline-primary">Finish</button>
-        )}
+          {nextEnabled ? (
+            <button
+              className="btn btn-outline-primary"
+              onClick={nextDay}
+              disabled={!nextEnabled}
+            >
+              Next
+            </button>
+          ) : (
+            <button className="btn btn-outline-primary ">
+              <Link to="/breakdown">Finish</Link>
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

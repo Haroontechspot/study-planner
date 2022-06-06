@@ -40,9 +40,10 @@ const reportReducer = createSlice({
         days[nextIndex].status = DAYSTATUS.ACTIVE;
       }
     },
+    reset: (state) => (state = initialState),
   },
 });
 
-export const { updateDayProgress, moveBack, moveNext } = reportReducer.actions;
+export const { updateDayProgress, moveBack, moveNext,reset } = reportReducer.actions;
 
 export default reportReducer.reducer;

@@ -1,4 +1,5 @@
 import { Splash } from "./splash";
 import { Home } from "./home";
+import { BreakDownScreen } from "./breakdown";
 
-export { Splash, Home };
+export { Splash, Home, BreakDownScreen };

@@ -1,0 +1,110 @@
+@import "../../index.scss";
+
+.breakdown-screen {
+  .dayreport-chart-container {
+    .back-btn-container {
+      font-size: 20px;
+      a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+      }
+    }
+    .dayreport-heading {
+      text-align: center;
+    }
+    .chart-parent {
+      border: 2px solid;
+      height: 400px;
+      position: relative;
+      transition: border-color 0.3s ease;
+      padding: 1rem;
+      canvas {
+        height: 100% !important;
+        margin: auto;
+        width: 90% !important;
+      }
+    }
+    .chart-parent-daily {
+      border-color: $custom-color;
+    }
+    .chart-parent-weekly {
+      border-color: $secondary;
+    }
+    .action-container {
+      text-align: center;
+      margin-top: 5%;
+      .action-buttons {
+        .daily {
+          color: $custom-color;
+        }
+        .weekly {
+          color: $secondary;
+        }
+      }
+    }
+  }
+  .activity-parent {
+    display: grid;
+    align-items: center;
+    .activity-container {
+      .hint-container {
+        background-color: #262223;
+        color: #b5b3b4;
+        padding: 20px 30px;
+        font-size: 0.8rem;
+        margin-top: 30px;
+        position: relative;
+        margin-bottom: 2rem;
+        ::before {
+          content: "i";
+          font-family: "ChronicleTextG1-Bold", "Times New Roman", Times, serif;
+          position: absolute;
+          left: 16px;
+          top: -30px;
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          background-color: #262223;
+          color: #ffffff;
+          text-align: center;
+          font-size: 1.8rem;
+        }
+      }
+      .button-container {
+        width: 50%;
+        margin: auto;
+        button {
+          border-radius: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media print {
+  .dayreport-chart-container {
+    text-align: center;
+    align-items: center;
+    display: grid;
+    padding: 10%;
+    .button-back {
+      display: none;
+    }
+    .chart-parent {
+      border: 2px solid #903;
+      height: 400px;
+      position: relative;
+      transition: border-color 0.3s ease;
+      padding: 1rem;
+      canvas {
+        height: 100% !important;
+        margin: auto;
+        width: 90% !important;
+      }
+    }
+    .action-container {
+      display: none;
+    }
+  }
+}

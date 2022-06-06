@@ -3,10 +3,12 @@ import React from "react";
 //stylesheet
 import "./style.scss";
 
-export const BgcolorHandler = ({ children }) => {
+export const BgcolorHandler = ({ children, custombgColorClass }) => {
   return (
-    <div className="bg-body">
-      <div className="linear-grid">{children}</div>
+    <div className={`${custombgColorClass ?? "bg-body"}`}>
+      <div className={`${!custombgColorClass ?? "linear-grid"}`}>
+        {children}
+      </div>
     </div>
   );
 };

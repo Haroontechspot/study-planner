@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 //screens
-import { Home, Splash } from "./screens";
+import { BreakDownScreen, Home, Splash } from "./screens";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Splash />} />
         <Route exact path="/home" element={<Home />} />
+        <Route exact path="/breakdown" element={<BreakDownScreen />} />
       </Routes>
     </BrowserRouter>
   );
