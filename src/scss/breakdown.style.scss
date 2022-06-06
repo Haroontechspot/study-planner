@@ -30,6 +30,9 @@
     }
     .chart-parent-weekly {
       border-color: $secondary;
+      canvas {
+        width: 360px !important;
+      }
     }
     .action-container {
       text-align: center;

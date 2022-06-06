@@ -60,6 +60,7 @@ export const Splash = ({ heading = HEADING, description = DESCRIPTION }) => {
             <div className="degree-container d-flex pt-4">
               <span>I am doing:</span>
               <Dropdown
+                defaultValue={'undergraduate'}
                 options={[
                   { key: 1, label: "Undergraduate", value: "undergraduate" },
                   { key: 2, label: "Postgraduate", value: "postgraduate" },
@@ -69,6 +70,7 @@ export const Splash = ({ heading = HEADING, description = DESCRIPTION }) => {
             <div className="semester-unit d-flex pt-4">
               <span>with:</span>
               <Dropdown
+                defaultValue={'4'}
                 options={[
                   { key: 1, label: "1", value: "1" },
                   { key: 2, label: "2", value: "2" },

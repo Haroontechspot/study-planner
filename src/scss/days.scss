@@ -8,29 +8,29 @@ $customColor: #903333;
     justify-content: space-around;
     .day {
       display: grid;
-      width: 30px;
-      height: 30px;
+      width: 35px;
+      height: 35px;
       border-radius: 50%;
       text-align: center;
       align-items: center;
-      font-size: 10px;
+      font-size: 12px;
+      font-weight: bold;
     }
-    .inactive-day {
-      border: 1px solid black;
-    }
+    // .inactive-day {
+    //   border: 1px solid black;
+    // }
     .active-day {
-      border: 1px solid $customColor;
+      background-color: $customColor;
       color: #fff;
-      background: $customColor;
-      font-weight: bold;
+      border-radius: 50%;
     }
-    .day-filled {
-      color: green;
-      font-weight: bold;
-      &::before {
-        content: "✓";
-      }
-    }
+    // .day-filled {
+    //   color: green;
+    //   font-weight: bold;
+    //   &::before {
+    //     content: "✓";
+    //   }
+    // }
   }
   .progress-parent {
     background: #fff;

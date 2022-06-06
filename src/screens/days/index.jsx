@@ -9,10 +9,10 @@ import { ProgressFields } from "./progress";
 import "../../scss/days.scss";
 
 const initialState = {
-  study: 0,
-  work: 0,
-  social: 0,
-  personal: 16,
+  [Fields.STUDY]: 0,
+  [Fields.WORK]: 0,
+  [Fields.SOCIAL]: 0,
+  [Fields.PERSONAL]: 16,
 };
 
 const reducer = (state, action) => {
@@ -43,13 +43,13 @@ export const Days = () => {
 
   const updateProgress = (name, value) => {
     let newProgress = { ...progress };
-    const cp = progress.personal + progress[name];
-    newProgress.personal =
+    const cp = progress[Fields.PERSONAL] + progress[name];
+    newProgress[Fields.PERSONAL] =
       value > progress[name]
         ? cp - value
-        : newProgress.personal + (newProgress[name] - value);
+        : newProgress[Fields.PERSONAL] + (newProgress[name] - value);
 
-    if (newProgress.personal >= 0) {
+    if (newProgress[Fields.PERSONAL] >= 0) {
       newProgress[name] = value;
       setState({ type: name, payload: value });
       dispatch(updateDayProgress({ ...activeday, progress: newProgress }));
@@ -83,25 +83,25 @@ export const Days = () => {
           <div className="fields-container">
             <ProgressFields
               label="Study"
-              value={progress.study}
+              value={progress[Fields.STUDY]}
               name={Fields.STUDY}
               onFocusOut={updateProgress}
             />
             <ProgressFields
               label="Work"
-              value={progress.work}
+              value={progress[Fields.WORK]}
               name={Fields.WORK}
               onFocusOut={updateProgress}
             />
             <ProgressFields
               label="Social"
-              value={progress.social}
+              value={progress[Fields.SOCIAL]}
               name={Fields.SOCIAL}
               onFocusOut={updateProgress}
             />
             <ProgressFields
               label="Personal"
-              value={progress.personal}
+              value={progress[Fields.PERSONAL]}
               name={Fields.PERSONAL}
               onFocusOut={updateProgress}
               disable={true}

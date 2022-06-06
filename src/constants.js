@@ -13,10 +13,10 @@ export const DAYSTATUS = {
 };
 
 export const ProgressFields = {
-  STUDY: "study",
-  WORK: "work",
-  SOCIAL: "social",
-  PERSONAL: "personal",
+  STUDY: "Study",
+  WORK: "Work",
+  SOCIAL: "Social",
+  PERSONAL: "Personal",
 };
 
 export const ReportStatus = {

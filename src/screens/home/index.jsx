@@ -42,10 +42,12 @@ export const Home = () => {
         </div>
       </WithBgColor>
       <Tour
+        highlightedMaskClassName="tour-custom"
         startAt={0}
         showNumber={false}
         steps={toursteps}
         isOpen={isTourOpen}
+        showNavigationNumber={false}
         onRequestClose={() => setTourOpen(false)}
         prevButton={<Button variant="outline-primary">Back</Button>}
         nextButton={<Button variant="outline-primary">Next</Button>}
