@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 //screens
-import { BreakDownScreen, Home, Splash } from "./screens";
+import { BreakDownScreen, Home, Splash } from "./components/screens";
 
 function App() {
   return (

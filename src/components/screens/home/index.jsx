@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import Tour from "reactour";
 
 //components
-import { WithBgColor } from "../../components";
-import { toursteps } from "../../constants";
+import { WithBgColor } from "../..";
+import { toursteps } from "../../../constants";
 import { Days } from "../days";
 import { DayReportsChart } from "../days-report-chart";
-import "../../scss/home.scss";
+import "../../../scss/home.scss";
 
 export const Home = () => {
   const [isTourOpen, setTourOpen] = useState(false);
