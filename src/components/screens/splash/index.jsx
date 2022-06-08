@@ -3,10 +3,10 @@ import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 //components
-import { Dropdown, WithBgColor } from "../../components";
+import { Dropdown, WithBgColor } from "../../index";
 
 //stylesheet
-import "../../scss/splash.scss";
+import "../../../scss/splash.scss";
 
 const HEADING = "Welcome to the Study Planner";
 const DESCRIPTION = `

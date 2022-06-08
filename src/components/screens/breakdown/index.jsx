@@ -5,11 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import ReactToPrint from "react-to-print";
 
-import { WithBgColor, Switch, PieChart } from "../../components";
+import { WithBgColor, Switch, PieChart } from "../..";
 import { DayReportsChart } from "../days-report-chart";
 import { reset } from "../../reducers/report";
-import { piechartdatasetFormatter, ReportStatus } from "../../constants";
-import "../../scss/breakdown.style.scss";
+import { piechartdatasetFormatter, ReportStatus } from "../../../constants";
+import "../../../scss/breakdown.style.scss";
 
 
 export const BreakDownScreen = () => {

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { DAYSTATUS } from "../constants";
-import { generateDays } from "../utils";
+import { DAYSTATUS } from "../../constants";
+import { generateDays } from "../../utils";
 
 const initialState = {
   days: generateDays(),

@@ -2,11 +2,11 @@ import React, { useEffect, useReducer } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { DAY_CLASS, ProgressFields as Fields } from "../../constants";
+import { DAY_CLASS, ProgressFields as Fields } from "../../../constants";
 import { updateDayProgress, moveNext, moveBack } from "../../reducers/report";
-import { dayBtnEnabled, findActiveDay } from "../../utils";
+import { dayBtnEnabled, findActiveDay } from "../../../utils";
 import { ProgressFields } from "./progress";
-import "../../scss/days.scss";
+import "../../../scss/days.scss";
 
 const initialState = {
   [Fields.STUDY]: 0,
