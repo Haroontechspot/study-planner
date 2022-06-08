@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -20,6 +20,8 @@ ChartJS.register(
 );
 
 export function Linegroupchart({ datasets, labels, title = "Daily Reports" }) {
+  const ref = useRef(null);
+
   const data = { labels, datasets };
   const options = {
     plugins: {
@@ -45,5 +47,12 @@ export function Linegroupchart({ datasets, labels, title = "Daily Reports" }) {
     },
   };
 
-  return <Bar options={options} data={data} />;
+  useEffect(() => {
+    let lineChart = ref?.chartInstance;
+    if (lineChart) {
+      lineChart.update();
+    }
+  }, [data]);
+
+  return <Bar ref={ref} options={options} data={data} />;
 }
