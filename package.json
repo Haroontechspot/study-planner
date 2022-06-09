@@ -1,7 +1,7 @@
 {
   "name": "learn2learn",
   "version": "0.1.0",
-  "homepage": "https://natashaadam123.github.io/wsu-study-planner/",
+  "homepage": "https://Haroontechspot.github.io/study-planner/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
