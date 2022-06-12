@@ -11335,4 +11335,150 @@ fieldset:disabled .btn {
     display: none !important;
   }
 }
-/*# sourceMappingURL=index.css.map */
+
+.day-container {
+  min-height: 45vh;
+  margin: auto;
+}
+
+.day-container .days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.day-container .days .day {
+  display: -ms-grid;
+  display: grid;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.day-container .days .active-day {
+  background-color: #903333;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.day-container .progress-parent {
+  background: #fff;
+  padding: 4px;
+  margin-top: 11px;
+  border-radius: 5px;
+  border: 2px solid #903333;
+}
+
+.day-container .progress-parent .progress-container {
+  padding: 3px;
+  height: 79%;
+}
+
+.day-container .progress-parent .progress-container .toolhint {
+  min-height: 56px;
+  position: relative;
+  background-color: #262223;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  width: 75%;
+  text-align: center;
+  cursor: default;
+  margin-bottom: 1rem;
+  font-family: "GothamNarrow-Book", "GothamNarrow-Light", Arial, Helvetica, sans-serif;
+}
+
+.day-container .progress-parent .progress-container .toolhint strong {
+  font-size: 0.8rem;
+}
+
+.day-container .progress-parent .progress-container .toolhint:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border: 0.8em solid transparent;
+  position: absolute;
+  left: 2.7rem;
+  bottom: -18px;
+  border-top: 10px solid #262223;
+}
+
+.day-container .progress-parent .progress-container .progress {
+  height: 50px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 5px;
+  background: none;
+}
+
+.day-container .progress-parent .progress-container .progress .label {
+  width: 50%;
+  text-align: center;
+}
+
+.day-container .progress-parent .progress-container .progress .input-container {
+  width: 20%;
+}
+
+.day-container .progress-parent .progress-container .progress .input-container .input-box {
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #903333;
+  width: 100%;
+  outline-color: #903333;
+  border-radius: 4px;
+  padding: 0px;
+  height: 35px;
+}
+
+.day-container .progress-parent .progress-container .progress .hours-label {
+  width: 30%;
+}
+
+.day-container .progress-parent .progress-container .disabled {
+  background: #f0d7d6;
+  color: #fff;
+}
+
+.day-container .progress-parent .progress-container .disabled input {
+  outline-color: #903333;
+  background-color: #903333;
+  color: #fff;
+}
+
+.day-container .progress-parent .btn-container {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.day-container .progress-parent .btn-container button {
+  width: 50%;
+  margin: 10px;
+  border-radius: 16px;
+}
+
+.day-container .progress-parent .btn-container button a {
+  text-decoration: none;
+  color: inherit;
+}
+/*# sourceMappingURL=days.css.map */

@@ -1,0 +1,18 @@
+.full-background-img, .bg-body {
+  background: url("https://lf.westernsydney.edu.au/p/learn2learn/wp-content/plugins/lf-study-planner/img/chart-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.bg-body {
+  min-height: 101vh;
+  width: 100%;
+}
+
+.bg-body .linear-grid {
+  min-height: inherit;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.521569), rgba(0, 0, 0, 0.470588));
+}
+/*# sourceMappingURL=style.css.map */

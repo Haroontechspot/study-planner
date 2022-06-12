@@ -37,6 +37,13 @@ export const Colors = {
   [ProgressFields.PERSONAL]: "#ddedc8",
 };
 
+export const DegreeTypes = {
+  postgraduate: "Postgraduate",
+  underPostgraduate: "Undergraduate",
+};
+
+export const SemesterUnits = [1, 2, 3, 4];
+
 export const piechartdatasetFormatter = (days) => {
   const data = {
     labels: Object.values(ProgressFields),
@@ -75,7 +82,7 @@ export const piechartdatasetFormatter = (days) => {
       pf[ProgressFields.SOCIAL] += progress[ProgressFields.SOCIAL];
       pf[ProgressFields.PERSONAL] += progress[ProgressFields.PERSONAL];
     }
-    return day
+    return day;
   });
   data.datasets[0].data = Object.values(pf);
   return data;
@@ -117,7 +124,7 @@ export const dayChartFormatter = (days) => {
         }
       });
     }
-    return day
+    return day;
   });
 
   return datasets;

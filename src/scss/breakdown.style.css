@@ -1,5 +1,5 @@
 body {
-  --bs-body-font-family: $fontFamily;
+  --bs-body-font-family: "GothamNarrow-Book, GothamNarrow-Light, Arial, Helvetica, sans-serif";
 }
 
 /*!
@@ -11335,4 +11335,131 @@ fieldset:disabled .btn {
     display: none !important;
   }
 }
-/*# sourceMappingURL=index.css.map */
+
+.breakdown-screen .dayreport-chart-container .back-btn-container {
+  font-size: 20px;
+}
+
+.breakdown-screen .dayreport-chart-container .back-btn-container a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.breakdown-screen .dayreport-chart-container .dayreport-heading {
+  text-align: center;
+}
+
+.breakdown-screen .dayreport-chart-container .chart-parent {
+  border: 2px solid;
+  height: 400px;
+  position: relative;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  padding: 1rem;
+}
+
+.breakdown-screen .dayreport-chart-container .chart-parent canvas {
+  height: 100% !important;
+  margin: auto;
+  width: 90% !important;
+}
+
+.breakdown-screen .dayreport-chart-container .chart-parent-daily {
+  border-color: #990033;
+}
+
+.breakdown-screen .dayreport-chart-container .chart-parent-weekly {
+  border-color: #069;
+}
+
+.breakdown-screen .dayreport-chart-container .chart-parent-weekly canvas {
+  width: 360px !important;
+}
+
+.breakdown-screen .dayreport-chart-container .action-container {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.breakdown-screen .dayreport-chart-container .action-container .action-buttons .daily {
+  color: #990033;
+}
+
+.breakdown-screen .dayreport-chart-container .action-container .action-buttons .weekly {
+  color: #069;
+}
+
+.breakdown-screen .activity-parent {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.breakdown-screen .activity-parent .activity-container .hint-container {
+  background-color: #262223;
+  color: #b5b3b4;
+  padding: 20px 30px;
+  font-size: 0.8rem;
+  margin-top: 30px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.breakdown-screen .activity-parent .activity-container .hint-container ::before {
+  content: "i";
+  font-family: "ChronicleTextG1-Bold", "Times New Roman", Times, serif;
+  position: absolute;
+  left: 16px;
+  top: -30px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #262223;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.breakdown-screen .activity-parent .activity-container .button-container {
+  width: 50%;
+  margin: auto;
+}
+
+.breakdown-screen .activity-parent .activity-container .button-container button {
+  border-radius: 2rem;
+}
+
+@media print {
+  .dayreport-chart-container {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -ms-grid;
+    display: grid;
+    padding: 10%;
+  }
+  .dayreport-chart-container .button-back {
+    display: none;
+  }
+  .dayreport-chart-container .chart-parent {
+    border: 2px solid #903;
+    height: 400px;
+    position: relative;
+    -webkit-transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease;
+    padding: 1rem;
+  }
+  .dayreport-chart-container .chart-parent canvas {
+    height: 100% !important;
+    margin: auto;
+    width: 90% !important;
+  }
+  .dayreport-chart-container .action-container {
+    display: none;
+  }
+}
+/*# sourceMappingURL=breakdown.style.css.map */

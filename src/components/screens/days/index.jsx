@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { DAY_CLASS, ProgressFields as Fields } from "../../../constants";
 import { updateDayProgress, moveNext, moveBack } from "../../reducers/report";
-import { dayBtnEnabled, findActiveDay } from "../../../utils";
+import { dayBtnEnabled, findActiveDay, findPrev_Day } from "../../../utils";
 import { ProgressFields } from "./progress";
 import "../../../scss/days.scss";
 
@@ -52,6 +52,10 @@ export const Days = () => {
     if (newProgress[Fields.PERSONAL] >= 0) {
       newProgress[name] = value;
       setState({ type: name, payload: value });
+      setState({
+        type: Fields.PERSONAL,
+        payload: newProgress[Fields.PERSONAL],
+      });
       dispatch(updateDayProgress({ ...activeday, progress: newProgress }));
     }
   };
@@ -65,9 +69,21 @@ export const Days = () => {
   };
 
   useEffect(() => {
-    setState({ type: "many", payload: progress });
-  }, [progress, activeday]);
-
+    const preDay = findPrev_Day(days);
+    if (
+      !progress[Fields.STUDY] &&
+      !progress[Fields.SOCIAL] &&
+      !progress[Fields.WORK]
+    ) {
+      if (preDay) {
+        setState({ type: "many", payload: preDay.progress });
+      } else {
+        setState({ type: "many", payload: initialState });
+      }
+    } else {
+      setState({ type: "many", payload: progress });
+    }
+  }, [activeday]);
   return (
     <div className="day-container">
       <div className="days">
@@ -79,7 +95,11 @@ export const Days = () => {
       </div>
       <div className="progress-parent">
         <div className="progress-container" style={{ minHight: 500 }}>
-          <div className="toolhint">40 hours recommended per week</div>
+          <div className="toolhint">
+            <strong>{report.recommendedhours} <span>Hrs</span></strong>
+            <br />
+            Recommended per week
+          </div>
           <div className="fields-container">
             <ProgressFields
               label="Study"

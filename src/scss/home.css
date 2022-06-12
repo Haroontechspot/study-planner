@@ -1,0 +1,95 @@
+.home-bg-color {
+  background: url("https://lf.westernsydney.edu.au/p/learn2learn/wp-content/plugins/lf-study-planner/img/chart-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.home-bg-color .home-container {
+  height: 100vh;
+  width: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-bg-color .home-container .helper-sign {
+  padding: 20px;
+  width: 98%;
+}
+
+.home-bg-color .home-container .helper-sign svg {
+  font-size: 90px;
+  color: #fff;
+}
+
+.home-bg-color .home-container .helper-sign svg :hover {
+  color: #903333;
+  cursor: pointer;
+}
+
+.home-bg-color .home-container [class~="row"] {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 6rem;
+}
+
+.home-bg-color .home-container [class~="row"] .hint-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  line-height: 2rem;
+  position: absolute;
+  background: none;
+  border-radius: 50%;
+  color: #903;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #903;
+  font-size: 1rem;
+  line-height: 1rem;
+  right: 3.5rem;
+  top: 2rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-align: center;
+  padding: 0;
+}
+
+.home-bg-color .home-container [class~="row"] .hint-btn:hover {
+  background-color: #903;
+  color: #fff;
+}
+
+.home-bg-color .home-container [class~="row"] .days-info-container {
+  display: -ms-grid;
+  display: grid;
+}
+
+.home-bg-color .home-container [class~="row"] .days-info-container .back-btn-container {
+  padding-left: 25px;
+}
+
+.home-bg-color .home-container [class~="row"] .days-info-container .back-btn-container .button-back {
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.home-bg-color .home-container [class~="row"] .chart-container {
+  margin-top: 20px;
+}
+
+.home-bg-color .home-container [class~="row"] .chart-container .daily-chart-report {
+  background-color: #fff;
+  margin: auto;
+  border-radius: 14px;
+  border: 2px solid #903333;
+}
+
+@media (min-width: 992px) {
+  .home-bg-color .home-container [class~="row"] .col-lg-9 {
+    width: 72%;
+  }
+}
+/*# sourceMappingURL=home.css.map */

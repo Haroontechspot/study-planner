@@ -7,6 +7,10 @@ import { Dropdown, WithBgColor } from "../../index";
 
 //stylesheet
 import "../../../scss/splash.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { DegreeTypes, SemesterUnits } from "../../../constants";
+import { calculateRecommendHours } from "../../../utils";
+import { updateRecommendedHours } from "../../reducers/report";
 
 const HEADING = "Welcome to the Study Planner";
 const DESCRIPTION = `
@@ -16,7 +20,43 @@ subject, you will spend about 10-12 hours per week engaged in
 on-campus, online or practical activities, self-directed learning,
 including readings, reflection and completing assessment tasks.`;
 
+const fieldTypes = {
+  degree: "degree",
+  unit: "unit",
+};
+
 export const Splash = ({ heading = HEADING, description = DESCRIPTION }) => {
+  const { degreeType, semesterUnits, recommendedhours } = useSelector(
+    (state) => state.report
+  );
+  const dispatch = useDispatch();
+
+  const generateDegreeTypesOptions = () =>
+    Object.values(DegreeTypes).map((dType, index) => ({
+      key: index,
+      label: dType,
+      value: dType,
+    }));
+
+  const generateSemesterUnitsOptions = () =>
+    SemesterUnits.map((unit) => ({ key: unit, label: unit, value: unit }));
+
+  const onChange = (type, value) => {
+    let payload = {
+      recommendedhours,
+      degreeType,
+      semesterUnits,
+    };
+    if (type === fieldTypes.degree) {
+      payload.recommendedhours = calculateRecommendHours(value, semesterUnits);
+      payload.degreeType = value;
+    } else if (type === fieldTypes.unit) {
+      payload.recommendedhours = calculateRecommendHours(degreeType, value);
+      payload.semesterUnits = value;
+    }
+    dispatch(updateRecommendedHours(payload));
+  };
+
   return (
     <WithBgColor custombgColorClass={"splash-container-img"}>
       <div className="splash-container">
@@ -60,23 +100,19 @@ export const Splash = ({ heading = HEADING, description = DESCRIPTION }) => {
             <div className="degree-container d-flex pt-4">
               <span>I am doing:</span>
               <Dropdown
-                defaultValue={'undergraduate'}
-                options={[
-                  { key: 1, label: "Undergraduate", value: "undergraduate" },
-                  { key: 2, label: "Postgraduate", value: "postgraduate" },
-                ]}
+                defaultValue={degreeType}
+                options={generateDegreeTypesOptions()}
+                onChange={(e) => onChange(fieldTypes.degree, e.target.value)}
               />
             </div>
             <div className="semester-unit d-flex pt-4">
               <span>with:</span>
               <Dropdown
-                defaultValue={'4'}
-                options={[
-                  { key: 1, label: "1", value: "1" },
-                  { key: 2, label: "2", value: "2" },
-                  { key: 3, label: "3", value: "3" },
-                  { key: 4, label: "4", value: "4" },
-                ]}
+                defaultValue={semesterUnits}
+                options={generateSemesterUnitsOptions()}
+                onChange={(e) =>
+                  onChange(fieldTypes.unit, parseInt(e.target.value))
+                }
               />
               <span className="unit-text">units this semester</span>
             </div>

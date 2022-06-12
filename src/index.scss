@@ -1,10 +1,16 @@
 $custom-color: #990033;
 $secondary: #069;
+$fontFamily: "GothamNarrow-Book", "GothamNarrow-Light", Arial, Helvetica,
+  sans-serif;
 
 $theme-colors: (
   "primary": $custom-color,
   "secondary": $secondary,
   "danger": #ff4136,
 );
+
+body {
+  --bs-body-font-family: $fontFamily;
+}
 
 @import "../node_modules/bootstrap/scss/bootstrap";

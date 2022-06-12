@@ -11335,4 +11335,129 @@ fieldset:disabled .btn {
     display: none !important;
   }
 }
-/*# sourceMappingURL=index.css.map */
+
+.card-style, .splash-container-img .splash-container .heading-container, .splash-container-img .splash-container .sub-menu-container .info-container {
+  border: 1px solid #000;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.custom-dropdown, .splash-container-img .splash-container .sub-menu-container .info-container .degree-container .degree-dropdown, .splash-container-img .splash-container .sub-menu-container .info-container .semester-unit .degree-dropdown {
+  padding: 10px;
+  margin-top: -11px;
+}
+
+.rm-padding-horizontal, .splash-container-img .splash-container .heading-container, .splash-container-img .splash-container .sub-menu-container {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.pad-horizontal, .splash-container-img .splash-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.splash-container-img {
+  background: url("https://lf.westernsydney.edu.au/p/learn2learn/wp-content/plugins/lf-study-planner/img/start-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.splash-container-img .splash-container {
+  max-width: 80%;
+  margin: auto;
+  padding-top: 10px;
+  height: 100vh;
+}
+
+.splash-container-img .splash-container .heading-container {
+  padding: 18px;
+  margin-top: 18px;
+}
+
+.splash-container-img .splash-container .heading-container .heading {
+  font-weight: 900;
+  font-family: "GothamNarrow-Book", "GothamNarrow-Light", Arial, Helvetica, sans-serif;
+}
+
+.splash-container-img .splash-container .heading-container p {
+  font-size: 20px;
+  font-family: "GothamNarrow-Book", "GothamNarrow-Light", Arial, Helvetica, sans-serif;
+}
+
+.splash-container-img .splash-container .sub-menu-container .hint-container .hint-text-dv {
+  background-color: #262223;
+  color: #b5b3b4;
+  padding: 20px 30px;
+  font-size: 0.8rem;
+  margin-top: 30px;
+  position: relative;
+  margin-bottom: 2rem;
+  font-family: "GothamNarrow-Book", "GothamNarrow-Light", Arial, Helvetica, sans-serif;
+}
+
+.splash-container-img .splash-container .sub-menu-container .hint-container .hint-text-dv ::before {
+  content: "i";
+  font-family: "ChronicleTextG1-Bold", "Times New Roman", Times, serif;
+  position: absolute;
+  left: 16px;
+  top: -30px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #262223;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.splash-container-img .splash-container .sub-menu-container .info-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 20px;
+}
+
+.splash-container-img .splash-container .sub-menu-container .info-container .degree-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.splash-container-img .splash-container .sub-menu-container .info-container .degree-container .degree-dropdown {
+  margin-left: 10px;
+}
+
+.splash-container-img .splash-container .sub-menu-container .info-container .semester-unit {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.splash-container-img .splash-container .sub-menu-container .info-container .semester-unit .unit-text {
+  margin-left: 10px;
+}
+
+.splash-container-img .splash-container .sub-menu-container .info-container .semester-unit .degree-dropdown {
+  margin-left: 10px;
+}
+
+.splash-container-img .splash-container .sub-menu-container .info-container .btn-container {
+  text-align: center;
+}
+
+.splash-container-img .splash-container .sub-menu-container .info-container .btn-container .started-btn {
+  border-radius: 20px;
+  min-width: 70%;
+}
+/*# sourceMappingURL=splash.css.map */

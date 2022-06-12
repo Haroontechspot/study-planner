@@ -1,3 +1,5 @@
+@import "../index.scss";
+
 $customColor: #903333;
 
 .day-container {
@@ -42,27 +44,29 @@ $customColor: #903333;
       padding: 3px;
       height: 79%;
       .toolhint {
-        height: 56px;
-        width: 50%;
-        text-align: center;
-        align-items: center;
-        display: grid;
-        background: #41464b;
-        color: #fff;
+        min-height: 56px;
         position: relative;
-        margin-bottom: 3px;
-        &:after {
-          border: 0px solid black;
+        background-color: #262223;
+        color: #fff;
+        padding: 0.5rem;
+        font-size: 0.7rem;
+        width: 75%;
+        text-align: center;
+        cursor: default;
+        margin-bottom: 1rem;
+        font-family: $fontFamily;
+        strong {
+          font-size: 0.8rem;
+        }
+        &:before {
           content: "";
+          width: 0px;
+          height: 0px;
+          border: 0.8em solid transparent;
           position: absolute;
-          left: 37%;
-          top: 96%;
-          width: 0;
-          height: 0;
-          border-left: 9px solid transparent;
-          border-right: 9px solid transparent;
-          border-top: 9px solid #41464b;
-          clear: both;
+          left: 2.7rem;
+          bottom: -18px;
+          border-top: 10px solid #262223;
         }
       }
       .progress {

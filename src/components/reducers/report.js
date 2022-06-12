@@ -1,8 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { DAYSTATUS } from "../../constants";
-import { generateDays } from "../../utils";
+import {
+  DAYSTATUS,
+  DegreeTypes,
+  ProgressFields,
+  SemesterUnits,
+} from "../../constants";
+import { calculateRecommendHours, generateDays } from "../../utils";
 
 const initialState = {
+  recommendedhours: calculateRecommendHours(
+    DegreeTypes.underPostgraduate,
+    SemesterUnits[SemesterUnits.length - 1]
+  ),
+  degreeType: DegreeTypes.underPostgraduate,
+  semesterUnits: SemesterUnits[SemesterUnits.length - 1],
   days: generateDays(),
   buttons: [],
 };
@@ -11,6 +22,11 @@ const reportReducer = createSlice({
   name: "report",
   initialState,
   reducers: {
+    updateRecommendedHours: (state, { payload }) => {
+      state.recommendedhours = payload.recommendedhours;
+      state.degreeType = payload.degreeType;
+      state.semesterUnits = payload.semesterUnits;
+    },
     updateDayProgress: (state, { payload }) => {
       const { days } = state;
       const index = days.findIndex((day) => day.id === payload.id);
@@ -27,7 +43,14 @@ const reportReducer = createSlice({
       if (currentDayIndex !== -1 && currentDayIndex < days.length - 1) {
         const nextIndex = currentDayIndex + 1;
         days[nextIndex].status = DAYSTATUS.ACTIVE;
-        days[nextIndex].progress = activeday.progress;
+        const { progress } = days[nextIndex];
+        if (
+          !progress[ProgressFields.SOCIAL] &&
+          !progress[ProgressFields.STUDY] &&
+          !progress[ProgressFields.WORK]
+        ) {
+          days[nextIndex].progress = activeday.progress;
+        }
       }
     },
     moveBack: (state, { payload }) => {
@@ -44,6 +67,12 @@ const reportReducer = createSlice({
   },
 });
 
-export const { updateDayProgress, moveBack, moveNext,reset } = reportReducer.actions;
+export const {
+  updateDayProgress,
+  moveBack,
+  moveNext,
+  reset,
+  updateRecommendedHours,
+} = reportReducer.actions;
 
 export default reportReducer.reducer;
