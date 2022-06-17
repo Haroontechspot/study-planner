@@ -15,24 +15,14 @@ $customColor: #903333;
       border-radius: 50%;
       text-align: center;
       align-items: center;
-      font-size: 12px;
+      font-size: 0.8rem;
       font-weight: bold;
     }
-    // .inactive-day {
-    //   border: 1px solid black;
-    // }
     .active-day {
       background-color: $customColor;
       color: #fff;
       border-radius: 50%;
     }
-    // .day-filled {
-    //   color: green;
-    //   font-weight: bold;
-    //   &::before {
-    //     content: "✓";
-    //   }
-    // }
   }
   .progress-parent {
     background: #fff;
@@ -74,7 +64,8 @@ $customColor: #903333;
         text-align: center;
         align-items: center;
         width: 100%;
-        font-size: 16px;
+        font-size: 0.9rem;
+        font-weight: bold;
         margin-top: 5px;
         background: none;
         .label {
@@ -86,21 +77,20 @@ $customColor: #903333;
           .input-box {
             font-size: 14px;
             text-align: center;
-            border: 1px solid $customColor;
+            border: 2px solid #903333;
             width: 100%;
-            outline-color: $customColor;
-            border-radius: 4px;
+            outline-color: #903333;
+            border-radius: 0px;
             padding: 0px;
-            height: 35px;
+            height: 26px;
           }
         }
         .hours-label {
-          width: 30%;
+          width: 20%;
         }
       }
       .disabled {
         background: #f0d7d6;
-        color: #fff;
         input {
           outline-color: $customColor;
           background-color: $customColor;

@@ -14,11 +14,8 @@ import { updateRecommendedHours } from "../../reducers/report";
 
 const HEADING = "Welcome to the Study Planner";
 const DESCRIPTION = `
-This study planner will help you get started on planning your day or
-week, and block out time for study-related activities. For an average
-subject, you will spend about 10-12 hours per week engaged in
-on-campus, online or practical activities, self-directed learning,
-including readings, reflection and completing assessment tasks.`;
+This study planner will help you get started on planning your day or week, and block out time for study-related activities. For an average subject, you will spend about 10-12 hours per week engaged in on-campus, online or practical activities, self-directed learning, including readings, reflection and completing assessment tasks. Categorising your activities and events around study, social, work, and personal might be useful in making decisions on how you prioritise your time.  
+`;
 
 const fieldTypes = {
   degree: "degree",
